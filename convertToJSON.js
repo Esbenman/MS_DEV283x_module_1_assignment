@@ -9,10 +9,10 @@ const outputFilePath=path.join(__dirname, '/customer-data.json')
 
 function saveFile(object) {
     /* Saves the file object as JSON to the jsonFilePath */
-    jsonString=JSON.stringify(object)
+    jsonString=JSON.stringify(object,null,2)
     fs.writeFile(outputFilePath, jsonString, function (error) {
 	if (error) return console.error(error)
-	console.log('Writing is done.')
+	console.log('Done')
     })
     
 }
